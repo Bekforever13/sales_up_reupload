@@ -15,7 +15,6 @@ import axiosBasic from '../../../services/axios/axiosBasic'
 import { chartsModel } from '../../../store/chartsModel'
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
-
 const CoursesChart = () => {
 	const [counts, setCounts] = useState([])
 	const dispatch = useDispatch()

@@ -16,7 +16,6 @@ import { Select } from 'antd'
 import '../Home.scss'
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
-
 const options = {
 	responsive: true,
 	plugins: {
