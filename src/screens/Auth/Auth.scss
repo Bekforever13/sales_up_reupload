@@ -1,0 +1,17 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+.form__wrapper {
+	@apply flex items-center justify-center w-full h-screen bg-[#E0E0E0];
+	.form {
+		@apply flex items-center justify-center flex-col w-[40%] h-[50%] bg-white gap-y-8 rounded-md shadow-lg px-[5%];
+		h1 {
+			@apply text-3xl text-[#1a76d2] font-bold;
+		}
+	}
+	.number,
+	.password {
+		@apply border-[1px] border-black py-2 px-4 rounded-md shadow-md w-full outline-0 overflow-hidden;
+	}
+}

@@ -1,0 +1,37 @@
+.home {
+	display: flex;
+	padding: 30px;
+	align-items: center;
+	gap: 50px;
+	flex-wrap: wrap;
+
+	.courses {
+		background-color: white;
+		padding: 30px;
+		border-radius: 30px;
+		width: 500px;
+		flex-grow: 100%;
+
+		h2 {
+			margin-bottom: 20px;
+		}
+	}
+
+	.statuses {
+		background-color: white;
+		padding: 30px;
+		border-radius: 30px;
+		width: 500px;
+
+		.heading {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			h2 {
+				margin-bottom: 20px;
+			}
+
+		}
+	}
+}

@@ -1,0 +1,31 @@
+.layout__wrapper {
+	@apply flex;
+	&__aside {
+		.ant-layout-sider {
+		}
+	}
+	&__header {
+		@apply flex items-center justify-between w-full h-fit py-2 px-6 bg-[#1976D2] shadow-2xl;
+		&__logo {
+			@apply flex items-center justify-center text-[1.5rem] text-slate-800 my-4 font-medium whitespace-nowrap;
+		}
+		&__lang {
+			@apply flex items-center justify-center w-[68px] h-[45px] gap-x-1 relative;
+			.popup-btn {
+				@apply text-[1.2rem] cursor-pointer;
+			}
+			.lang__popup {
+				@apply absolute right-0 mt-32 bg-white shadow-md overflow-hidden py-[10px] px-3 rounded-md w-[64px] h-[100px] flex items-center justify-center;
+				ul {
+					@apply flex flex-col items-center justify-between gap-y-5 overflow-hidden;
+					li {
+						@apply w-full bg-[#1976d214] cursor-pointer;
+						&:active {
+							@apply font-bold;
+						}
+					}
+				}
+			}
+		}
+	}
+}
