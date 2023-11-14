@@ -13,13 +13,7 @@ const Auth = () => {
 	const [errorMessage, setErrorMessage] = useState('')
 	const dispatch = useDispatch()
 	const navigate = useNavigate()
-	// check
-	useEffect(() => {
-		const tokenToCheck = localStorage.getItem('token')
-		axiosBasic
-			.post('/auth/check', tokenToCheck)
-			.then(res => navigate('/', { replace: true }))
-	}, [])
+	const token = localStorage.getItem('token')
 
 	// on click submit button
 	const login = e => {
@@ -28,10 +22,15 @@ const Auth = () => {
 			.post('/auth/login', currentUser)
 			.then(res => {
 				localStorage.setItem('token', 'Bearer ' + res.data.data.token)
-				navigate('/', { replace: true })
 			})
 			.catch(e => console.log(e.response))
+			.finally(() => navigate('/'))
 	}
+
+	// check
+	useEffect(() => {
+		axiosBasic.post('/auth/check').then(() => navigate('/', { replace: true }))
+	}, [])
 
 	return (
 		<div className='form__wrapper'>

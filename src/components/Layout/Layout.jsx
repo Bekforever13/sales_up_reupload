@@ -21,7 +21,6 @@ const Layouts = () => {
 		axiosBasic
 			.post('/auth/check', token)
 			.then(res => setCurrentUser(res.data.data.name))
-			.catch(() => navigate('/auth', { replace: true }))
 	}, [token])
 
 	// onclick language
